@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
