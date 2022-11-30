@@ -4,21 +4,22 @@ function Contact() {
   return (
     <div className="container">
       <main id="contact">
-        <h1 class="lg-heading">
+        <h1 className="lg-heading">
           Contact
-          <span class="text-secondary">Me</span>
+          <span className="text-secondary">Me</span>
         </h1>
-        <h2 class="sm-heading">This is how you can reach me...</h2>
-        <div class="boxes">
+        <h2 className="sm-heading">This is how you can reach me...</h2>
+        <div className="boxes">
           <div>
-            <span class="text-secondary">Email:</span> Evince.Edouard@Gmail.com
+            <span className="text-secondary">Email:</span>{' '}
+            Evince.Edouard@Gmail.com
           </div>
           <div>
-            <span class="text-secondary">Github:</span>
+            <span className="text-secondary">Github:</span>
             <a href="https://github.com/EEdouard28">Click Here</a>
           </div>
           <div>
-            <span class="text-secondary">Linkedin:</span>
+            <span className="text-secondary">Linkedin:</span>
             <a href="https://www.linkedin.com/in/evinceedouard">Click Here</a>
           </div>
         </div>
