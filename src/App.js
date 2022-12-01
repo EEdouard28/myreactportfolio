@@ -1,4 +1,5 @@
 import './scss/App.scss';
+import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,7 +17,8 @@ function App() {
         {/* Routes component wrap route component defining elements that are conditionally rendered depending on endpoint */}
         <Routes>
           {/* End point and component renders to endpoint */}
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Project" element={<Project />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Resume" element={<Resume />} />
