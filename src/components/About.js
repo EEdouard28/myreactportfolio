@@ -1,5 +1,4 @@
 import React from 'react';
-import './components.css';
 
 function About() {
   return (
@@ -12,7 +11,8 @@ function About() {
         <h2 className="sm-heading">Let me tell you a few things...</h2>
         <div className="about-info">
           <img
-            src="../../public/img/portrait.jpg"
+            // must require in order to use image
+            src={require('../assets/img/portrait.jpg')}
             alt="Evince Edouard"
             className="bio-image"
           />

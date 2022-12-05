@@ -17,9 +17,8 @@ function App() {
         {/* Routes component wrap route component defining elements that are conditionally rendered depending on endpoint */}
         <Routes>
           {/* End point and component renders to endpoint */}
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Project" element={<Project />} />
+          <Route path="/" element={<About />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Resume" element={<Resume />} />
         </Routes>
