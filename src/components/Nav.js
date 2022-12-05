@@ -5,7 +5,7 @@ function Nav() {
   return (
     <div className="container navLinks">
       <Link className="linkStyles" to="/">
-        About Me
+        Home
       </Link>
       <Link className="linkStyles" to="/Portfolio">
         Portfolio
