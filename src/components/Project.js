@@ -4,11 +4,16 @@ function Project() {
   return (
     <div className="container">
       <div className="projects">
-        <div className="item">
-          <a href="#!">
-            <img src="img/projects/project1.jpg" alt="Project" />
-          </a>
-        </div>
+        <a
+          href="https://project2-safe-med.herokuapp.com/
+"
+        >
+          <img
+            className="projectImg"
+            src={require('../assets/img/projects/project1.jpg')}
+            alt="Project"
+          />
+        </a>
       </div>
     </div>
   );
