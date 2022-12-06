@@ -52,7 +52,7 @@ h1 {
 }
 
 .lName {
-  margin: 15px;
+  margin: 5px;
 }
 
 
@@ -153,6 +153,29 @@ justify-content: flex-end;
   }
 }
 
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 10px;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
 
 #main-footer {
   text-align: center;
@@ -161,6 +184,7 @@ justify-content: flex-end;
   color: set-text-color($primary-color);
   height: 60px;
 }
+
 
 .about-info {
   display: grid;

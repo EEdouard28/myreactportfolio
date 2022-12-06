@@ -5,38 +5,63 @@ function Project() {
     <div className="container">
       {/* safeMed Project */}
       <div className="projects">
-        <a
-          href="https://project2-safe-med.herokuapp.com/
-"
-        >
+        <div className="item">
           <img
             className="projectImg"
             src={require('../assets/img/projects/project1.jpg')}
             alt="Project"
           />
-        </a>
+          <a
+            href="https://project2-safe-med.herokuapp.com/"
+            className="btn-light"
+          >
+            <i className="fas fa-eye"></i>Project
+          </a>
+
+          <a
+            href="https://github.com/rsenecal/Project2-safeMed"
+            className="btn-dark"
+          >
+            <i className="fab fa-github"></i>Github
+          </a>
+        </div>
         {/* iEats Project */}
-        <a
-          href="https://inidhi99.github.io/ieats/
-"
-        >
+        <div className="item">
           <img
             className="projectImg"
             src={require('../assets/img/projects/project2.jpg')}
             alt="Project"
           />
-        </a>
+          <a href="https://inidhi99.github.io/ieats/" className="btn-light">
+            <i className="fas fa-eye"></i>Project
+          </a>
+
+          <a href="https://github.com/inidhi99/ieats" className="btn-dark">
+            <i className="fab fa-github"></i>Github
+          </a>
+        </div>
         {/* backend project */}
-        <a
-          href="https://inidhi99.github.io/ieats/
-"
-        >
+        <div className="item">
           <img
             className="projectImg"
             src={require('../assets/img/projects/project3.jpg')}
             alt="Project"
           />
-        </a>
+
+          <a
+            href="https://github.com/EEdouard28/social-network-api"
+            className="btn-light"
+          >
+            <i className="fas fa-eye"></i>Project
+          </a>
+
+          <a
+            href="https://github.com/EEdouard28/social-network-api"
+            className="btn-dark"
+          >
+            <i className="fab fa-github"></i>Github
+          </a>
+        </div>
       </div>
     </div>
   );
