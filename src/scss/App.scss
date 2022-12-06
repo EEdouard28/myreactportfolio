@@ -1,12 +1,11 @@
 @import 'config';
-// @import 'menu';
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  // @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
@@ -67,31 +66,19 @@ justify-content: flex-end;
   margin: 15px;
 }
 
-main {
-  padding: 4rem;
-  // height: 100%;
-  min-height: calc(100vh - 60px);
 
   .icons {
-    margin-top: 1rem;
+    min-height: calc(100vh - 60px);
 
     a {
       padding: 0.4rem;
       @include easeOut;
-
       &:hover {
         color: $secondary-color;
       }
     }
   }
 
-  &#home {
-    overflow: hidden;
-    h1 {
-      margin-top: 20vh;
-    }
-  }
-}
 
 .about-info {
   display: grid;
@@ -136,6 +123,8 @@ main {
 .projectImg {
   display: grid;
   width: 100%;
+ padding: 20px;
+
 }
 
 // Contact Page
@@ -315,4 +304,4 @@ color: #fff;
 }
 
 
-// @import 'mobile';
+@import 'mobile';

@@ -26,6 +26,17 @@ function Project() {
             alt="Project"
           />
         </a>
+        {/* backend project */}
+        <a
+          href="https://inidhi99.github.io/ieats/
+"
+        >
+          <img
+            className="projectImg"
+            src={require('../assets/img/projects/project3.jpg')}
+            alt="Project"
+          />
+        </a>
       </div>
     </div>
   );
