@@ -1,5 +1,5 @@
 ### Built With
-*  [![React][reactjs.org/]][Reactjs-url]
+*  [![React][reactjs.org]][Reactjs-url]
 *  [![NodeJS][Node.js]][Nodejs-url]
 *  [![Sass][sass-lang.com]][Sass-url]
 
