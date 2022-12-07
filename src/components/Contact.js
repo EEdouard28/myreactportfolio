@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { validateEmail } from '../utils/helpers';
 
 const FormStyles = styled.form`
   width: 100%;
@@ -49,9 +50,25 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+  // email validation
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      return;
+    }
+    setEmail('');
   };
 
   return (
@@ -74,11 +91,11 @@ function Contact() {
           <label htmlFor="email">
             Email:
             <input
-              type="text"
-              id="email"
-              name="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="email"
             />
           </label>
         </div>
@@ -97,6 +114,12 @@ function Contact() {
         <button type="submit" onClick={handleFormSubmit}>
           Send
         </button>
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+        {/* <p className="regexMessage">{message}</p> */}
       </FormStyles>
       {/* Contact Links */}
       <main id="contact">
