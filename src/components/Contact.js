@@ -1,64 +1,95 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const FormStyles = styled.form`
+  width: 100%;
+  .form-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  label {
+    form-size: 1.8rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.2 rem;
+    ${'' /* color and background colors */}
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  textarea {
+    min-height: 250px;
+    resize: vertical;
+  }
+  button[type='submit'] {
+    font-size: 2rem;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 1rem 4 rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+`;
 
 function Contact() {
   // state variables for name
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    return name === 'firstName' ? setFirstName(value) : setLastName(value);
-  };
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
-    alert(`Hello ${firstName} ${lastName}`);
-    setFirstName('');
-    setLastName('');
   };
 
   return (
     <div className="container">
-      <div className="contactForm">
-        {/* Contact Form */}
-        <p>Name area</p>
-        <form className="form">
-          <input
-            value={firstName}
-            name="firstName"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="First Name"
-          />
-
-          <input
-            value="lastName"
-            name="lastName"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="Last Name"
-          />
-          {/* <input
-          value="email"
-          name="email"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Please Provide A Email Address"
-          />
-           <input
-          value=
-          name="message"
-          onChange
-          type="text"
-          placeholder="Write A Message"
-          /> */}
-          <button type="button" onClick={handleFormSubmit}>
-            Submit
-          </button>
-        </form>
-      </div>
-
+      {/* Contact Form */}
+      <FormStyles>
+        <div className="form-group">
+          <label htmlFor="name">
+            Name:
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">
+            Email:
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">
+            Message:
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </label>
+        </div>
+        <button type="button" onClick={handleFormSubmit}>
+          Send
+        </button>
+      </FormStyles>
       {/* Contact Links */}
       <main id="contact">
         <h2 className="sm-heading">This is how you can reach me...</h2>
