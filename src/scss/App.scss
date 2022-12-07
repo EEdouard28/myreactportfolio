@@ -254,6 +254,18 @@ justify-content: flex-end;
 
 
 // contact page
+.form {
+  margin: 20px;
+}
+
+.form input {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
