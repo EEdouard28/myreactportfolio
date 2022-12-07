@@ -4,8 +4,9 @@
 *  [![Sass][sass-lang.com]][Sass-url]
 
 
-# My React Portfolio - eMAR Software
-  ## Description
+# My React Portfolio
+
+## Description
     This portfolio website is built using React JS, NodeJS, and SASS and details information about myself, my work, and contact info.
 
  
