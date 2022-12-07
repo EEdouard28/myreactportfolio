@@ -3,9 +3,16 @@ import styled from 'styled-components';
 
 const FormStyles = styled.form`
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
   .form-group {
     width: 100%;
     margin-bottom: 2rem;
+    margin: 20px;
   }
   label {
     form-size: 1.8rem;
@@ -22,17 +29,18 @@ const FormStyles = styled.form`
     margin-top: 1rem;
   }
   textarea {
-    min-height: 250px;
+    min-height: 175px;
     resize: vertical;
   }
   button[type='submit'] {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-block;
     outline: none;
     border: none;
-    padding: 1rem 4 rem;
-    border-radius: 8px;
+    padding: 0.5rem 2 rem;
+    border-radius: 6px;
     cursor: pointer;
+    margin: 20px;
   }
 `;
 
@@ -86,7 +94,7 @@ function Contact() {
             />
           </label>
         </div>
-        <button type="button" onClick={handleFormSubmit}>
+        <button type="submit" onClick={handleFormSubmit}>
           Send
         </button>
       </FormStyles>
