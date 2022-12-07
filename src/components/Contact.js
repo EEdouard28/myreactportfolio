@@ -57,17 +57,27 @@ function Contact() {
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
-    if (inputType === 'email') {
+    if (inputType === 'name') {
+      setName(inputValue);
+    } else if (inputType === 'email') {
       setEmail(inputValue);
+    } else {
+      setMessage(inputValue);
     }
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    // if invalid email send error message
     if (!validateEmail(email)) {
       setErrorMessage('Email is invalid');
       return;
     }
+    if (!name || !message) {
+      setErrorMessage('Please fill out your name and message');
+      return;
+    }
+    // otherwise set email
     setEmail('');
   };
 
@@ -84,6 +94,8 @@ function Contact() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              placeholder="this field is required"
+              pattern="[a-zA-Z0-9]+"
             />
           </label>
         </div>
@@ -95,7 +107,6 @@ function Contact() {
               name="email"
               onChange={handleInputChange}
               type="email"
-              placeholder="email"
             />
           </label>
         </div>
@@ -107,6 +118,7 @@ function Contact() {
               id="message"
               name="message"
               value={message}
+              pattern="[a-zA-Z0-9]+"
               onChange={(e) => setMessage(e.target.value)}
             />
           </label>
@@ -119,7 +131,6 @@ function Contact() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        {/* <p className="regexMessage">{message}</p> */}
       </FormStyles>
       {/* Contact Links */}
       <main id="contact">
